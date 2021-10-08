@@ -1,0 +1,11 @@
+--- a/loader/setjmp.h	2021-10-07 21:22:03.825185880 -0700
++++ b/loader/setjmp.h	2021-10-07 21:22:30.545573264 -0700
+@@ -37,7 +37,7 @@
+ __BEGIN_DECLS
+ 
+ #include <bits/setjmp.h>               /* Get `__jmp_buf'.  */
+-#include <bits/sigset.h>               /* Get `__sigset_t'.  */
++#include <bits/types/__sigset_t.h>     /* Get `__sigset_t'.  */
+ 
+ /* Calling environment, plus possibly a saved signal mask.  */
+ typedef struct __jmp_buf_tag   /* C++ doesn't like tagless structs.  */

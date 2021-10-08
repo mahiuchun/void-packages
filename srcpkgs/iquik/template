@@ -1,0 +1,20 @@
+# Template file for 'iquik'
+pkgname=iquik
+version=0.99
+revision=1
+archs="ppc"
+wrksrc="iQUIK-${version}"
+short_desc="New old PowerMac bootloader"
+maintainer="Hill Ma <maahiuzeon@gmail.com>"
+license="GPL-2.0-only"
+homepage="https://github.com/andreiw/iQUIK"
+distfiles="https://github.com/andreiw/iQUIK/archive/${version}.tar.gz"
+checksum=de3fe8f757125b3ea1a1f13b934c78d7a76718a28b2e657a92e23bc2aaa8161e
+
+do_build() {
+	make
+}
+
+do_install() {
+	make install DESTDIR=${PKGDESTDIR}
+}

@@ -1,0 +1,11 @@
+--- a/loader/Makefile	2021-10-07 21:33:49.539378733 -0700
++++ b/loader/Makefile	2021-10-07 21:34:22.151848210 -0700
+@@ -20,7 +20,7 @@
+ 	PRETARGET=log_env
+ endif
+ 
+-CFLAGS = -I../include -Os -D__NO_STRING_INLINES -nostdlib -fno-builtin -Werror -Wall $(BUILD_FLAGS)
++CFLAGS = -I../include -Os -D__NO_STRING_INLINES -nostdlib -fno-builtin -fno-stack-protector -Werror -Wall $(BUILD_FLAGS)
+ ASFLAGS=-D__ASSEMBLY__ -I../include $(BUILD_FLAGS)
+ 
+ #
